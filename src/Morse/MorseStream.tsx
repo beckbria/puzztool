@@ -83,7 +83,9 @@ class MorseStream extends LocalStorageComponent<Props, State, SavedState> {
   }
 
   protected getLocalStorageKey() {
-    return 'MorseStream';
+    // If you change the type of the state object, update this key to avoid breaking
+    // when restoring data
+    return 'MorseStream2';
   }
 
   protected onSaveState() {
